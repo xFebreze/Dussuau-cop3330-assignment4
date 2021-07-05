@@ -1,0 +1,73 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App{
+    main()
+    start()
+}
+
+class AgendaController{
+    model: ToDoListModel
+    GUI handler
+}
+
+class ToDoListModel{
+    todolist list: List<ToDoList>
+
+    SaveListButtonClicked()
+    SaveAllListButtonClicked()
+    LoadListButtonClicked()
+    LoadAllListButtonClicked()
+    addListButtonClicked()
+    removeListButtonClicked()
+    editListButtonClicked()
+    DisplayItemsButtonClicked()
+    DisplayIncompleteItemsButtonClicked()
+    DisplayCompleteItemsButtonClicked()
+    SaveList()
+    SaveAllList()
+    LoadList()
+    LoadAllList()
+    addList()
+    removeList()
+    editList()
+    DisplayItems()
+    DisplayIncompleteItems()
+    DisplayCompleteItems()
+}
+
+class ItemModel{
+    addItemButtonClicked()
+    removeItemButtonClicked()
+    editItemDescriptionButtonClicked()
+    editItemDueDateButtonClicked()
+    markItemCompleteButtonClicked()
+    addItem()
+    removeItem()
+    editItemDescription()
+    editItemDueDate()
+    markItemComplete()
+}
+
+class ToDoList{
+    Title: String
+    ItemList: List<Items>
+    updateTitle()
+}
+
+class Item{
+    Description: String
+    DueDate: int 'YYYY-MM-DD'
+    Completion: Boolean
+    updateDescription()
+    updateDueDate()
+    updateCompletion()
+}
+
+Item <-* ItemModel
+ToDoListModel *-> ToDoList
+AgendaController *--> ToDoListModel
+App -- AgendaController
+ToDoList *--> ItemModel
+
+@enduml
