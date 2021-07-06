@@ -1,67 +1,66 @@
 package ucf.assignments;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-import java.awt.event.ActionEvent;
-
-public class ToDoListModel {
+public class ToDoListController {
 
     @FXML
-    public void saveListButtonClicked(ActionEvent actionevent){
+    public void saveListButtonClicked(javafx.event.ActionEvent actionevent){
         //when save list button is clicked
         saveList();
     }
 
     @FXML
-    public void saveAllListButtonClicked(ActionEvent actionevent){
+    public void saveAllListButtonClicked(javafx.event.ActionEvent actionevent){
         //when save all list button is clicked
         saveAllList();
     }
 
     @FXML
-    public void loadListButtonClicked(ActionEvent actionevent){
+    public void loadListButtonClicked(javafx.event.ActionEvent actionevent){
         //when load list button is clicked
         loadList();
     }
 
     @FXML
-    public void loadAllListButtonClicked(ActionEvent actionevent){
+    public void loadAllListButtonClicked(javafx.event.ActionEvent actionevent){
         //when load all list button is clicked
         loadAllList();
     }
 
     @FXML
-    public void addListButtonClicked(ActionEvent actionevent){
+    public void addListButtonClicked(javafx.event.ActionEvent actionevent){
         //when add list button is clicked
         addList();
     }
 
     @FXML
-    public void removeListButtonClicked(ActionEvent actionevent){
+    public void removeListButtonClicked(javafx.event.ActionEvent actionevent){
         //when remove list button is clicked
         removeList();
     }
 
     @FXML
-    public void editListButtonClicked(ActionEvent actionevent){
+    public void editListButtonClicked(javafx.event.ActionEvent actionevent){
         //when edit list button is clicked
         editList();
     }
 
     @FXML
-    public void DisplayItemsButtonClicked(ActionEvent actionevent){
+    public void DisplayItemsButtonClicked(javafx.event.ActionEvent actionevent){
         //when display items button is clicked
         displayItems();
     }
 
     @FXML
-    public void displayItemsCompletedButtonClicked(ActionEvent actionevent){
+    public void displayItemsCompletedButtonClicked(javafx.event.ActionEvent actionevent){
         //when display completed items button is clicked
         displayItemsCompleted();
     }
 
     @FXML
-    public void displayItemsIncompletedButtonClicked(ActionEvent actionevent){
+    public void displayItemsIncompletedButtonClicked(javafx.event.ActionEvent actionevent){
         //when display incomplete items button is clicked
         displayItemsIncompleted();
     }
@@ -97,8 +96,9 @@ public class ToDoListModel {
 
     public static void addList(){
 
-        //Ask user for title of new ToDoList
-        //Make a new ToDoList
+        //Make pop up fxml (call another controller class)
+            //Ask user for title of new ToDoList
+            //Make a new ToDoList
 
     }
 
@@ -110,9 +110,10 @@ public class ToDoListModel {
 
     public static void editList(){
 
-        //Ask user for new title for the currently selected ToDoList
-        //call ToDoList.updateTitle(ToDoList, str)
-            //Replace the old ToDoList title with the user input
+        //make pop up fxml (call another controller class)
+            //Ask user for new title for the currently selected ToDoList
+            //call ToDoList.updateTitle(ToDoList, str)
+                //Replace the old ToDoList title with the user input
 
     }
 
@@ -136,5 +137,4 @@ public class ToDoListModel {
         //print out items that have "FALSE" for completed variable
 
     }
-
 }

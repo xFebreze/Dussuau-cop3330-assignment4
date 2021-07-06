@@ -18,14 +18,19 @@ public class App extends Application {
     public void start(Stage primaryStage) {
         try{
             Parent root = FXMLLoader.load(getClass().getResource("agenda.fxml"));
+            Parent root1 = FXMLLoader.load(getClass().getResource("todolist.fxml"));
+
 
             Scene scene = new Scene(root);
 
             primaryStage.setScene(scene);
             primaryStage.setTitle("Agenda");
+
+
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }

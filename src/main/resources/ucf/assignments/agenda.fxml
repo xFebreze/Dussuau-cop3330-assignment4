@@ -4,18 +4,18 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ToDoListController">
    <children>
-      <ListView prefHeight="400.0" prefWidth="300.0" />
-      <Button mnemonicParsing="false" text="save list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0" />
-      <Button mnemonicParsing="false" text="save all list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="50.0" />
-      <Button layoutX="32.0" layoutY="37.0" mnemonicParsing="false" text="load list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="90.0" />
-      <Button layoutX="36.0" layoutY="83.0" mnemonicParsing="false" text="load all list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="130.0" />
-      <Button layoutX="380.0" layoutY="106.0" mnemonicParsing="false" text="add list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="170.0" />
-      <Button layoutX="380.0" layoutY="151.0" mnemonicParsing="false" text="remove list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="210.0" />
-      <Button layoutX="380.0" layoutY="200.0" mnemonicParsing="false" text="edit list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="250.0" />
-      <Button layoutX="380.0" layoutY="246.0" mnemonicParsing="false" text="show items" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="290.0" />
-      <Button layoutX="167.0" layoutY="282.0" mnemonicParsing="false" text="show complete items" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="330.0" />
-      <Button layoutX="380.0" layoutY="341.0" mnemonicParsing="false" text="show incomplete items" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="370.0" />
+      <ListView fx:id="listField" prefHeight="400.0" prefWidth="300.0" />
+      <Button mnemonicParsing="false" onAction="#saveListButtonClicked" text="save list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0" />
+      <Button mnemonicParsing="false" onAction="#saveAllListButtonClicked" text="save all list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="50.0" />
+      <Button layoutX="32.0" layoutY="37.0" mnemonicParsing="false" onAction="#loadListButtonClicked" text="load list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="90.0" />
+      <Button layoutX="36.0" layoutY="83.0" mnemonicParsing="false" onAction="#loadAllListButtonClicked" text="load all list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="130.0" />
+      <Button layoutX="380.0" layoutY="106.0" mnemonicParsing="false" onAction="#addListButtonClicked" text="add list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="170.0" />
+      <Button layoutX="380.0" layoutY="151.0" mnemonicParsing="false" onAction="#removeListButtonClicked" text="remove list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="210.0" />
+      <Button layoutX="380.0" layoutY="200.0" mnemonicParsing="false" onAction="#editListButtonClicked" text="edit list" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="250.0" />
+      <Button layoutX="380.0" layoutY="246.0" mnemonicParsing="false" onAction="#DisplayItemsButtonClicked" text="show items" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="290.0" />
+      <Button layoutX="167.0" layoutY="282.0" mnemonicParsing="false" onAction="#displayItemsCompletedButtonClicked" text="show complete items" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="330.0" />
+      <Button layoutX="380.0" layoutY="341.0" mnemonicParsing="false" onAction="#displayItemsIncompletedButtonClicked" text="show incomplete items" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="370.0" />
    </children>
 </AnchorPane>

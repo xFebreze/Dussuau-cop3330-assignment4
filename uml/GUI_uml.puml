@@ -6,12 +6,8 @@ class App{
     start()
 }
 
-class AgendaController{
-    model: ToDoListModel
-    GUI handler
-}
-
-class ToDoListModel{
+class ToDoListController{
+    listDisplay: ListField
     todolist list: List<ToDoList>
 
     SaveListButtonClicked()
@@ -36,7 +32,8 @@ class ToDoListModel{
     DisplayCompleteItems()
 }
 
-class ItemModel{
+class ItemController{
+    listDisplay: ItemField
     addItemButtonClicked()
     removeItemButtonClicked()
     editItemDescriptionButtonClicked()
@@ -64,10 +61,9 @@ class Item{
     updateCompletion()
 }
 
-Item <-* ItemModel
-ToDoListModel *-> ToDoList
-AgendaController *--> ToDoListModel
-App -- AgendaController
-ToDoList *--> ItemModel
+Item <-* ItemController
+ToDoListController *-> ToDoList
+App *--> ToDoListController
+ToDoList *--> ItemController
 
 @enduml
