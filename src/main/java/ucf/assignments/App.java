@@ -17,14 +17,12 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try{
-            Parent root = FXMLLoader.load(getClass().getResource("agenda.fxml"));
-            Parent root1 = FXMLLoader.load(getClass().getResource("todolist.fxml"));
-
+            Parent root = FXMLLoader.load(getClass().getResource("todolist.fxml"));
 
             Scene scene = new Scene(root);
 
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Agenda");
+            primaryStage.setTitle("ToDoList");
 
 
             primaryStage.show();

@@ -1,43 +1,32 @@
 package ucf.assignments;
 
+import javafx.scene.control.DatePicker;
+
 public class Item {
 
-    //data storage for description (String)
-    //data storage for due date (Int)
-    //data storage for completion (Boolean)
+    private String description;
+    private String dueDate;
+    private Boolean complete;
 
-    public Item(String description, int dueDate){
-
-        //store description
-        //store due date
-        //Initializes item to be incomplete
+    //constructor
+    public Item(String description, String dueDate, Boolean complete) {
+        this.description = description;
+        this.dueDate = dueDate;
+        this.complete = complete;
     }
 
-    public static Item updateDescription(Item temp, String str){
-
-        //Take the given str and replace the current description
-        //return Item
-        return temp;
+    //getters
+    public String getDescription() {
+        return description;
     }
 
-    public static Item updateDueDate(Item temp, int num){
-
-        //Take the given num and replace the current due date
-        //return Item
-        return temp;
-
+    public String getDueDate() {
+        return dueDate;
     }
 
-    public static Item updateCompletion(Item temp){
-
-        //Check Item to see if marked TRUE or FALSE for completion
-        //if TRUE
-            //make FALSE
-        //if FALSE
-            //make TRUE
-
-        //return Item
-        return temp;
+    public Boolean getComplete() {
+        return complete;
     }
+
 
 }

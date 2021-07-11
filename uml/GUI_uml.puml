@@ -6,64 +6,45 @@ class App{
     start()
 }
 
-class ToDoListController{
-    listDisplay: ListField
-    todolist list: List<ToDoList>
-
-    SaveListButtonClicked()
-    SaveAllListButtonClicked()
-    LoadListButtonClicked()
-    LoadAllListButtonClicked()
-    addListButtonClicked()
-    removeListButtonClicked()
-    editListButtonClicked()
-    DisplayItemsButtonClicked()
-    DisplayIncompleteItemsButtonClicked()
-    DisplayCompleteItemsButtonClicked()
-    SaveList()
-    SaveAllList()
-    LoadList()
-    LoadAllList()
-    addList()
-    removeList()
-    editList()
-    DisplayItems()
-    DisplayIncompleteItems()
-    DisplayCompleteItems()
-}
-
 class ItemController{
-    listDisplay: ItemField
+    ItemList: List<Item>
+    TableView: ItemDisplay
+    TextField: DescriptionField
+    DatePicker: DueDate
     addItemButtonClicked()
     removeItemButtonClicked()
+    clearItemsButtonClicked()
     editItemDescriptionButtonClicked()
     editItemDueDateButtonClicked()
     markItemCompleteButtonClicked()
+    DisplayItemsButtonClicked()
+    DisplayIncompleteItemsButtonClicked()
+    DisplayCompleteItemsButtonClicked()
+    SaveListButtonClicked()
+    LoadListButtonClicked()
     addItem()
     removeItem()
+    clearItems()
     editItemDescription()
     editItemDueDate()
     markItemComplete()
-}
-
-class ToDoList{
-    Title: String
-    ItemList: List<Items>
-    updateTitle()
+    DisplayItems()
+    DisplayIncompleteItems()
+    DisplayCompleteItems()
+    SaveList()
+    LoadList()
 }
 
 class Item{
     Description: String
-    DueDate: int 'YYYY-MM-DD'
+    DueDate: String 'YYYY-MM-DD'
     Completion: Boolean
-    updateDescription()
-    updateDueDate()
-    updateCompletion()
+    constructors()
+    getters()
 }
 
 Item <-* ItemController
-ToDoListController *-> ToDoList
-App *--> ToDoListController
-ToDoList *--> ItemController
+App *--> ItemController
+
 
 @enduml
